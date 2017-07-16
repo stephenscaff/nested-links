@@ -23,10 +23,10 @@ var NestedLinks = (function() {
      */
     buildLink: function(){
      
-      nestedLinks.forEach(function (nestedLink, idx) {
+      Array.from(nestedLinks).forEach(function (nestedLink) {
         
         nestedLink.addEventListener('click', function (e) {
-          fakieLink = this.dataset.nestedLink;
+          var fakieLink = this.dataset.nestedLink;
           fakieLink && (e.preventDefault(),
           e.stopPropagation(), 
           window.open && e.metaKey ? window.open(fakieLink) : window.location.assign(fakieLink)
