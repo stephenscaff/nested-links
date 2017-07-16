@@ -1,6 +1,6 @@
 ## Nested Link
 
-A JS component that allows for links nested inside a block level link via a data attribute.
+A JS component that allows for links nested inside a block level link, via a data attribute.
 
 ## What's that good for?
 
@@ -17,15 +17,18 @@ Now just style that taxonomy element like you would any ole link, and you're gol
 
 ```html
 <article class="card">
-  <span class="card__link" href="/post-link">
-    <figure class="card__figure"><img src="https://source.unsplash.com/HzEb3ZRtV88/900x600"/></figure>
+  <a class="card__link" href="/post-link">
+    <figure class="card__figure">
+      <img src="https://source.unsplash.com/HzEb3ZRtV88/900x600"/>
+    </figure>
     <div class="card__content">
-      <span class="card__meta" data-nested-link="/tax-archive-link">Nested Cat Link</span>
+      <!-- Here's the data att for our nested link -->
+      <span class="card__meta" data-nested-link="http://yourmom.com/tax-archive">Nested Cat Link</span>
       <h3 class="card__title">Girls ain't nothing but trouble</h3>
       <p class="card__text">Listen homeboys don't mean to bust your bubble, but girls of the world ain't nothing but trouble.</p>
       <span class="card__btn">Read More</span>
     </div>
- </span>
+ </a>
 </article>  
 ```
 
